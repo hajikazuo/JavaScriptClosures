@@ -1,21 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados de Entrega</title>
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/dadosEntrega.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <body>
-    <h1>Dados de Entrega</h1>
-    
-    <h2>Itens do Carrinho:</h2>
-    <table id="tabela-itens">
-        <tr>
-            <th>Nome do Item</th>
-            <th>Preço</th>
-        </tr>
-    </table>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">SaborNoPonto</a>
+        </div>
+      </nav>
 
+    <div class="row">
+        <div class="col-md-6 formulario">
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome">
+                </div>
+                <div class="mb-3">
+                    <label for="cep" class="form-label">CEP:</label>
+                    <input type="text" class="form-control" id="cep" name="cep">
+                </div>
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="numero" class="form-label">Número:</label>
+                        <input type="text" class="form-control" id="numero" name="numero">
+                    </div>
+                    <div class="col-md-8">
+                        <label for="complemento" class="form-label">Complemento:</label>
+                        <input type="text" class="form-control" id="complemento" name="complemento">
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-md-6">
+            <table class="table" id="tabela-itens">
+                <thead></thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+            <div id="total-geral"></div>
+            <button class="btn btn-primary">Finalizar pedido</button>
+            <a class="btn btn-secondary" href="index.html">Voltar para a Página Inicial</a>
+            <button class="btn btn-danger" onclick="limparCarrinho()">Limpar carrinho</button>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="./carrinho.js"></script>
 </body>
+
 </html>

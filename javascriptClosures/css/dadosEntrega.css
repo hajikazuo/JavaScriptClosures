@@ -1,0 +1,10 @@
+.formulario {
+    padding: 5%;
+    background-color: gray;
+    height: 100vh;
+}
+
+.icon-button{
+    background: none;
+    border-style: none;
+}
